@@ -19,6 +19,9 @@ vim.api.nvim_set_keymap("i", "jk", "<ESC>", {noremap = true})
 --vim.api.nvim_set_keymap("n", "<F5>", ":source ~/.config/nvim/init.lua", {noremap = true})
 
 vim.keymap.set("n", "<leader><leader><leader>", ":source ~/.config/nvim/init.lua")
+--<CR> means ENTER key
+vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
 ----nvim customs end
 
 -- This keymap clears search
