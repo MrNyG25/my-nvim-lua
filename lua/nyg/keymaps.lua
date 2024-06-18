@@ -4,10 +4,22 @@ vim.o.relativenumber = true
 vim.o.number = true
 
 --opts
-vim.opt.clipboard = "unnamedplus"
-vim.opt.mouse = "a"
+--vim.opt.clipboard = "unnamedplus"
+--vim.opt.mouse = "a"
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
+----nvim customs
+
+--i means insert mode
 vim.api.nvim_set_keymap("i", "jk", "<ESC>", {noremap = true})
+
+--n means normal mode
+--vim.api.nvim_set_keymap("n", "<F5>", ":source ~/.config/nvim/init.lua", {noremap = true})
+
+vim.keymap.set("n", "<leader><leader><leader>", ":source ~/.config/nvim/init.lua")
+----nvim customs end
 
 -- This keymap clears search
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")

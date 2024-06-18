@@ -24,6 +24,13 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'christoomey/vim-tmux-navigator'
+  use 'vim-airline/vim-airline'
+  use {
+      'nvim-telescope/telescope.nvim',
+      tag = '0.1.4',
+      requires = {{'nvim-lua/plenary.nvim'}}
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

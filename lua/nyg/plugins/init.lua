@@ -1,5 +1,5 @@
 require("nyg.plugins.nvim-tree")
---require("core.plugins.telescope")
+require("nyg.plugins.telescope")
 --require("core.plugins.theme")
 --equire("core.plugins.lualine")
 --equire("core.plugins.autopairs")
