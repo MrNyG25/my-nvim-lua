@@ -16,16 +16,35 @@ return require('packer').startup(function(use)
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
+  --themes
   use 'folke/tokyonight.nvim'
-  vim.cmd[[ set background=dark ]]
-  vim.cmd[[ colorscheme tokyonight ]]
+  use 'oxfist/night-owl.nvim'
+  use 'joshdick/onedark.vim'
+  
+  --pane movement plugin
+  use 'christoomey/vim-tmux-navigator'
 
+  --autopairs
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
 
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-treesitter/nvim-treesitter'
-  use 'christoomey/vim-tmux-navigator'
   use 'vim-airline/vim-airline'
+  
+
+  -- lsp -> language server protocols
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    "glepnir/lspsaga.nvim", branch = "main", -- for window like vscode
+    "jose-elias-alvarez/typescript.nvim",
+    "onsails/lspkind.nvim"
+  }
+
+
   use {
       'nvim-telescope/telescope.nvim',
       tag = '0.1.4',
